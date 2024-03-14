@@ -6,20 +6,24 @@
     </h2>
 
     <div class="container">
-      <button @click="decrement">-</button>
+      <QBtn @click="decrement">-</QBtn>
       <p>
         <b>{{ state.count }}</b>
       </p>
-      <button @click="increment">+</button>
+      <QBtn @click="increment">+</QBtn>
     </div>
   </div>
   <p v-if="state.action" class="action text-center">
     {{ state.action }}
   </p>
-  <a href="https://docs.plasmo.com" target="_blank"> View Docs </a>
+
+  <a href="https://docs.plasmo.com" target="_blank">
+    <QChip>View Docs</QChip>
+  </a>
 </template>
 
 <style>
+
 .container {
   min-width: 470px;
   display: flex;
@@ -27,20 +31,36 @@
   justify-content: center;
   gap: 47px;
 }
+
 .text-center {
   text-align: center;
 }
+
 .action {
   color: #470;
   font-weight: bold;
 }
 </style>
+<script lang="ts" setup>
+import type {PlasmoGetStyle} from "plasmo";
+import {QBtn, QChip, Quasar} from "quasar";
+import cssText from "quasar/src/css/index.sass";
+import type {App} from "vue"
+import {reactive} from "vue";
 
-<script setup lang="ts">
-import { reactive } from "vue"
-import type { App } from "vue"
 
-const state = reactive({ count: 0, action: null })
+const state = reactive({count: 0, action: null})
+
+const getStyle: PlasmoGetStyle = () => {
+  const style = document.createElement("style");
+
+  // Append your existing CSS text
+  style.textContent = cssText;
+
+
+  return style;
+};
+
 
 function increment() {
   state.count++
@@ -52,10 +72,13 @@ function decrement() {
   state.action = "decrement"
 }
 
+
 defineOptions({
   prepare(app: App) {
-    // Use any plugins here:
-    // app.use
-  }
-})
+
+    app.use(Quasar, {});
+  },
+});
 </script>
+
+
