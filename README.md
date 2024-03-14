@@ -1,4 +1,14 @@
 This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
+ 
+In this project  you through the process of integrating Plasmo with the Quasar UI framework and creating your Chrome extensions with a modern, responsive design.
+Understanding Plasmo and Quasar UI
+
+Plasmo: Plasmo is a developer-friendly framework designed to streamline the process of building Chrome, Firefox, or Edge extensions. It simplifies the development workflow, making it easier for the developers to create, test, and deploy extensions.
+
+Quasar UI: Quasar UI is a comprehensive Vue.js framework that offers a wide range of components and utilities. It allows developers to build responsive websites, PWAs, SSR applications, Mobile, and Desktop apps from a single codebase, ensuring a consistent look.
+Getting Started
+[For more details, read the article on Medium.](https://medium.com/@larawf0019/integrating-plasmo-with-quasar-ui-for-creating-chrome-extensions-f5b3d47df1a1)
+
 
 ## Getting Started
 
