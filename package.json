@@ -5,12 +5,14 @@
   "description": "A basic Plasmo extension.",
   "author": "Lara",
   "scripts": {
+    "debug": "plasmo dev --verbose",
     "dev": "plasmo dev",
     "build": "plasmo build",
     "package": "plasmo package"
   },
   "dependencies": {
     "plasmo": "0.85.0",
+    "quasar": "^2.14.7",
     "vue": "3.4.15"
   },
   "devDependencies": {
